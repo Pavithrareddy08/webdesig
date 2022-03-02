@@ -1,0 +1,12 @@
+.table{
+    margin: 25px;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-left: 5px;
+    border-right: 5px;
+    padding: 30px;
+    font-size: 20px;
+    background-color: peachpuff;
+    border-collapse: collapse;
+    border-color: black;
+}
