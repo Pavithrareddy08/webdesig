@@ -1,0 +1,47 @@
+header{
+    background-color: palevioletred;
+    font-size: 50px;
+    color:blueviolet;
+}
+
+article{
+    background-color: crimson ;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.section-one{
+    background-color: brown;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+}
+
+.section-two{
+    background-color: goldenrod;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.First-heading{
+    color: palegreen;
+    font-size: 40px;
+}
+
+#code-one{
+    background-color: cornflowerblue;
+    font-size: 20px;
+    padding: 10px;
+    text-align: start;
+}
+
+.section-iframe{
+    max-width: fit-content;
+    background-color: hsl(180, 100%, 50%);
+}
