@@ -1,0 +1,35 @@
+header{
+    background-color: palevioletred;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.First-heading{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}    
+p{
+    font-size: 22px;
+    line-height: 25px;
+    text-align: auto;
+}
+.Second-heading{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+
+}
+ol{
+    font-size: 22px;
+    line-height: 25px;
+    text-align: auto;
+}
+}
+
+
+
+
+
