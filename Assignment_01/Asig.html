@@ -11,14 +11,14 @@
     <table>
         <tr>
             <td> 
-                <form>
+                <form autocomplete="off" onsubmit = "onFormSubmit()">
                     <div>
                         <lable>Full Name</lable>
                         <input type = "text" name = "Full Name">
                     </div>
                     <div>
                         <lable>ID Number</lable>
-                        <input type = "text" name = "ID Number">
+                        <input type = "number" name = "ID Number">
                     </div>
                     <div>
                         <lable>Email</lable>
@@ -26,16 +26,17 @@
                     </div>
                     <div>
                         <lable>Salary</lable>
-                        <input type = "text" name = "Salary">
+                        <input type = "number" name = "Salary">
                     </div>
-                    <div>
+                    <div class = "form_action--button">
                         <input type="submit" name="SUBMIT">
+                        <input type="reset" name="RESET">
                     </div>
                 </form>
             </td>
 
             <td>
-                <table>
+                <table class = "list">
                     <thead>
                         <tr>
                             <th>Full Name</th>

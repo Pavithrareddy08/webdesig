@@ -1,0 +1,52 @@
+body{
+
+}
+
+table{
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgb(124,154,167);
+}
+
+table.list{
+    text-align: center;
+    width: 100%;
+}
+
+td{
+    border: 1px solid rgb(204,200,200);
+    text-align: left;
+    padding: 8px 15px;
+}
+tr{
+    background-color: rgb(204,200,200);
+}
+
+input[type = "text"],input[type = "number"]{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+input[type = "submit"],input[type = "reset"]{
+    background: #eee;
+    padding: 6px 12px;
+    margin: 15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type = "submit"]:hover{
+    background: #4b99d8;
+}
+
+input[type = "reset"]:hover{
+    background: #4b99d8;
+}
