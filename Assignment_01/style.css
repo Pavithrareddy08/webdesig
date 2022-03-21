@@ -1,11 +1,14 @@
 body{
+    background-image: url("bg\ pic.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 
 }
 
 table{
     width: 80%;
     margin: 40px auto;
-    background-color: rgb(124,154,167);
+    background-color: rgb(84, 144, 170)
 }
 
 table.list{
@@ -14,12 +17,12 @@ table.list{
 }
 
 td{
-    border: 1px solid rgb(204,200,200);
+    border: 2px solid rgb(184, 152, 152);
     text-align: left;
     padding: 8px 15px;
 }
 tr{
-    background-color: rgb(204,200,200);
+    background-color: rgb(204,200,200)
 }
 
 input[type = "text"],input[type = "number"]{
