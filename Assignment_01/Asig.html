@@ -11,7 +11,9 @@
     <table>
         <tr>
             <td> 
-                <form autocomplete="off" onsubmit = "onFormSubmit()">
+                <!-- <form autocomplete="off" onsubmit = "onFormSubmit()"> -->
+                <form onsubmit = "event.preventDefault(); onFormSubmit();" autocomplete="off">
+
                     <div>
                         <lable>Full Name</lable>
                         <input type = "text" name = "fullName" id="fullName">
@@ -28,7 +30,7 @@
                         <lable>Salary</lable>
                         <input type = "number" name = "salary" id="salary">
                     </div>
-                    <div class = "form_action--button">
+                    <div class = "form-action-button">
                         <input type="submit" name="SUBMIT">
                         <input type="reset" name="RESET">
                     </div>
@@ -45,6 +47,9 @@
                             <th>Salary</th>
                         </tr>
                     </thead>
+                    <tbody>
+
+                    </tbody>
 
                 </table>
 
