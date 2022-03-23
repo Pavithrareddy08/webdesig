@@ -1,9 +1,4 @@
-body{
-    background-image: url("bg\ pic.jpg");
-    background-attachment: fixed;
-    background-size: cover;
 
-}
 
 table{
     width: 80%;
@@ -25,31 +20,12 @@ tr{
     background-color: rgb(204,200,200)
 }
 
-input[type = "text"],input[type = "number"]{
-    width: 90%;
-    padding: 12px 20px;
-    margin: 8px;
-    display: inline-block;
-    border: 1px solid rgb(165,161,161);
-    border-radius: 4px;
-}
+form{
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    background-color: black;
+    color: white;
+    padding: 20px;
 
-input[type = "submit"],input[type = "reset"]{
-    background: #eee;
-    padding: 6px 12px;
-    margin: 15px 0 10px;
-    display: inline-block;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    outline: none;
-}
-
-input[type = "submit"]:hover{
-    background: #4b99d8;
-}
-
-input[type = "reset"]:hover{
-    background: #4b99d8;
 }
