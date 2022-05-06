@@ -93,3 +93,60 @@ body {
 .mytabs input[type="radio"]:checked + label {
     background: #fff;
 }
+
+/* Program */
+.Program{
+    background:#101010;
+    width:100%;
+    padding: 100px 100px;
+}
+.course{
+    color: white;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width:1100px;
+    margin: 10px auto;
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+.card{
+    height: 365px;
+    width: 335px;
+    padding: 20px 20px;
+    background: #191919;
+    border-radius: 20px;
+    margin: 15px;
+    position: flex;
+    overflow: hidden;
+    text-align: center;
+}
+h5{
+    color: #f9004d;
+    font-size: 20px;
+    margin-bottom: 15px;
+    
+}
+.pra p{
+    color: #fcfc;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+
+.CLUBS{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: powderblue;
+    overflow: hidden;
+
+}
