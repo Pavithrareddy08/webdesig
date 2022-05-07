@@ -27,18 +27,24 @@
     margin: 0;
     padding: 0;
     display: flex;
+    text-decoration: none;
 }
 .navbar-links li{
     list-style: none;
 }
-.navbar_links li a{
+.navbar_links ul li a{
     color: #fff;
     text-decoration: none;
-    padding: 1rem;
+    padding: 10px;
     display:rgb(131,131,131)
 }
 .navbar-links li:hover{
-    background-color: white;
+    background-color: black;
+}
+.navbar .navbar-links ul li a{
+    text-decoration: none;
+    padding: 20px;
+    color: white;
 }
 .toggle-button{
     position: absolute;
@@ -90,7 +96,7 @@
     }
 }
 
-
+/* cover padge */
 .imgclass .content{
     position: absolute;
     bottom: 150px;
@@ -116,12 +122,13 @@ body {
     padding: 25px;
 }
 .mytabs input[type="radio"] {
-    display: none;
+    display: none
 }
 .mytabs label {
     padding: 25px;
     background: #9b9a9b;
     font-weight: bold;
+    
 }
 
 .mytabs .tab {
@@ -197,7 +204,7 @@ h5{
     justify-content: center;
 }
 .box1{
-    width: 250px;
+    width: 350px;
     margin: 0 10px;
     box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
     transition: 1s;
@@ -214,5 +221,131 @@ h5{
     z-index: 2;
 }
 
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .container .followus{
+    margin-right: 30px;
+    width: 40%;
+}
+footer .container .followus h2{
+    content: '';
+    
+   
+    width: auto;
+    background: #f9004d;
+    color: white;
+}
+.icon{
+    margin-top: 22px;
+    display: flex;
+}
+.icon li{
+    list-style: none;
+}
+.icon li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.icon li a .fa{
+    color: #fff;
+    font-size: 20px;
+}
+.icon li a:hover{
+    background: #f9004d;
+}
+.contactus{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+footer .container{
+     margin: auto;
+    display: flex;
+    flex-wrap: wrap; 
+}
+footer .container .contactus h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .container .contactus h2{
+    content: '';
+   
+    width: auto;
+    
+    background: #f9004d;
+    color: white;
+}
+.contactus .info{
+    position: relative;
+}
+.contactus .info li{
+    display: flex;
+    list-style: none;
+    margin-bottom: 16px;
+}
+.contactus .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contactus .info li span{
+    color: #999;
+}
+.contactus .info li span a{
+    color: #999;
+    text-decoration: none;
+}
+
+.copyRight{
+    width: 100%;
+    background: #181818;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}
+
+@media (max-width : 400px){
+    footer{
+        padding: 16px;
+    }
+
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container .followus{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    footer .container .contactus{
+        width: 100%;
+    }
+    .copyRight{
+        padding: 2px 20px;
+    }
+}
 
 
