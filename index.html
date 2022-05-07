@@ -104,20 +104,7 @@
             </div>
           </div>
 
-          <div class = "card">
-            <h5>Data Science</h5>
-            <div class = "pra">
-              <p>This course includes concepts from statistics, computer science, and software engineering. We learn the necessary skills to manage and analyze data. We learn concepts such as exploratory data analysis, statistical inference and modeling, machine learning, and high dimensional data analysis.</p>
-            </div>
-          </div>
-
-          <div class = "card">
-            <i class="fa-solid fa-bars"></i>
-            <h5>Food Technology</h5>
-            <div class = "pra">
-              <p>Food technology is the application of science and related fields of study in post-harvest handling, preparation, processing, packaging, storage and distribution of food to ensure food safety and the well-being of individuals, families, and communities.</p>
-            </div>
-          </div>
+          
         </div>      
       </div><br><br>
 <!-- end -->
@@ -149,8 +136,26 @@
 
       <!--Forms-->
       <div class="forms">
-        <h2 class="course"Conact Us></h2>
-      </div>
+        <div class="course">
+          <h2 style="color: black;">Contact Us</h2>
+        </div>
+        <form action="https://postmail.invotes.com/send"
+    method="post" id="email_form" style="text-align: center; margin: auto;">
+
+      <input type="text" name="subject" placeholder="Subject" size="50px" style="padding: 10px;"> <br><br>
+      <input name="text" placeholder="Message" size="50px" style="padding: 10px;"></input><br><br>
+      <input type="text" name="" id="" placeholder="Enter Your Mail Here" size="50px" style="padding: 10px;"><br><br>
+      <input type="hidden" name="access_token" value="wb4lzzhmttz5z0cs0rc3th8t" />
+      
+      <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+      <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+   
+
+   
+      <input id="submit_form" type="submit" value="Submit" style="width: 386px; padding:10px">
+   
+</form>
+      </div><br><br>
 
 <!-- end -->
 
@@ -162,8 +167,8 @@
           <h2>Follow Us</h2>
           <ul class = "icon">
             <li><a href = "https://www.instagram.com/loyolaacademyofficial/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href = ""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href = ""><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+            <li><a href = "https://www.facebook.com/groups/189646664389033/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href = "https://telanganagovtjobs.in/hyderabad-loyola-academy-degree-p-g-college-professor-assistant-professor-associate-professor-non-teaching-faculty-recruitment-2021-apply-through-post-in-person/" target="_blank" ><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
           </ul>
         </div>
 
@@ -200,5 +205,16 @@
       <p>LoyolaAcademy &copy; 2022 infopage. All Rights Reserved</p>
 
     </div>
+
+<script>
+  const toggleButton = document.getElementsByClassName('toggle-button')[0]
+  const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+  toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+})
+      
+   
+</script>
 </body>
 </html>
