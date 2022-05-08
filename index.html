@@ -16,19 +16,19 @@
   <!-- navbar and cover page-->
     <nav class = "navbar">
         <div class = "college-name">Loyola Academy</div>
-        <a href = "" class = "toggle-button">
+        <a href = "#" class = "toggle-button" onclick="myfunction()">
           <span class = "bar"></span>
           <span class = "bar"></span>
           <span class = "bar"></span>
           <span class = "bar"></span>
 
         </a>
-        <div class = "navbar-links">   
-            <ul >
-              <li><a href="">ABOUT</a></li>&nbsp;&nbsp;
-              <li><a href="">PROGRAMS</a></li>&nbsp;&nbsp;
-              <li><a href="">CLUBS</a></li>&nbsp;&nbsp;
-              <li><a href="">CONTACT</a></li>&nbsp;&nbsp;
+        <div class = "navbar-links" id="navbar-links">   
+            <ul id="mylinks" >
+              <li><a href="#mytabs">ABOUT</a></li>&nbsp;&nbsp;
+              <li><a href="#program">PROGRAMS</a></li>&nbsp;&nbsp;
+              <li><a href="#clubs">CLUBS</a></li>&nbsp;&nbsp;
+              <li><a href="#forms">CONTACT</a></li>&nbsp;&nbsp;
             </ul>
         </div>
     </nav>
@@ -45,7 +45,7 @@
 
  <!--tabs -->
     </div>
-    <div class="mytabs"></div>
+    <div class="mytabs" id="mytabs"></div>
     <h2 style="text-align: center; margin: auto; font-family: Georgia, 'Times New Roman', Times, serif;">ABOUT</h2>
     
     <div class="mytabs">
@@ -75,7 +75,7 @@
   <!-- End  -->
 
   <!-- prgram arrow section -->
-      <div class = "Program">
+      <div class = "Program" id="program">
         <div class = "course">
           <h2>PROGRAMS</h2>
         </div>
@@ -113,7 +113,7 @@
 <div class = "course">
   <h2 style="color: black;">CLUBS</h2>
 </div>
-      <div class = "Clubs">
+      <div class = "Clubs" id="clubs">
         
         <div class = "box1">
           <img src = "cult.jpg">
@@ -132,13 +132,13 @@
           <img src = "img3.jpg">
         </div>
      
-      </div>
+      </div><br><br><br>
 
       <!--Forms-->
-      <div class="forms">
+      <div class="forms" id="forms">
         <div class="course">
           <h2 style="color: black;">Contact Us</h2>
-        </div>
+        </div><br><br>
         <form action="https://postmail.invotes.com/send"
     method="post" id="email_form" style="text-align: center; margin: auto;">
 
@@ -201,19 +201,29 @@
         </div>
       </div>
     </footer>
-    <div class = "copyRight">
+    <div class = "copyRight" style="width: 100%;">
       <p>LoyolaAcademy &copy; 2022 infopage. All Rights Reserved</p>
 
     </div>
 
 <script>
-  const toggleButton = document.getElementsByClassName('toggle-button')[0]
+  /*const toggleButton = document.getElementsByClassName('toggle-button')[0]
   const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
   toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
-})
-      
+
+    
+})*/
+function myfunction() {
+  var x = document.getElementById("navbar-links");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+   
    
 </script>
 </body>
