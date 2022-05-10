@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Assignment</title>
+</head>
+<body>
+	<div class="container text-center">
+		
+	</div>
+
+	<h2>3a. User Names :</h2>
+
+	<p id="userNames"></p>
+
+	<h2>3b. User Names from city London :</h2>
+
+	<p id="userNamesFromLondon"></p>
+
+	<h2>3c. User Names with same city :</h2>
+
+    
+</body>
+
+</script>
+<script>
+    /* $.getJSON('https://jsonplaceholder.typicode.com/posts', function(data) {
+        // JSON result in `data` variable
+        console.log(data);
+    }); */
+    
+    
+    var jsonArr = '[{"name":"Harry Potter","city":"London"},{"name":"Don Quixote","city":"Madrid"},{"name":"Joan of Arc","city":"Paris"},{"name":"Rosa Park","city":"Alabama"},{"name":"John","city":"Paris"}]';
+    
+    //const txt = JSON.stringify(json, undefined, 4)
+    //alert(txt);
+    
+    const obj = JSON.parse(jsonArr);
+    //alert(obj[0].name);
+    
+    for (let i = 0; i < obj.length; i++) {
+        document.getElementById("userNames").innerHTML += obj[i].name + "<br>";
+    }
+    
+    for (let i = 0; i < obj.length; i++) {
+        if (obj[i].city === 'London') {
+            document.getElementById("userNamesFromLondon").innerHTML += obj[i].name
+                    + "<br>";
+        }
+    }
+    
+    function compareCity(a, b) {
+        if (a.city < b.city) {
+            return -1;
+        }
+        if (a.city > b.city) {
+            return 1;
+        }
+        return 0;
+    }
+    
+    obj.sort(compareCity);
+    
+    //obj = JSON.parse(jsonArr);
+    for (let i = 0; i < obj.length; i++) {
+        console.log(obj[i]);
+    }
+    //alert(obj);
+    
+    var cityTemp;
+    var nameTemp;
+    var count = 0;
+    for (let i = 0; i < obj.length; i++) {
+        cityTemp = obj[i].city;
+        nameTemp = obj[i].name;
+        console.log('i is : ' + i + ' cityTemp : ' + cityTemp
+                + " obj.length : " + obj.length);
+    
+        while (i < obj.length - 1 && obj[++i].city == cityTemp) {
+            count++;
+            console.log('while loop : ' + obj[i]);
+            document.getElementById("userWithSameCity").innerHTML += "User with city : "
+                    + cityTemp + "<br>" + obj[i].name + "<br>";
+        }
+    
+        if (count > 0) {
+            document.getElementById("userWithSameCity").innerHTML += nameTemp;
+            document.getElementById("userWithSameCity").innerHTML += "<br>"
+        }
+        if (i < obj.length - 1) {
+            i--;
+        }
+        count = 0;
+    }
+    
+</script>   
+
+</html>
