@@ -19,10 +19,20 @@
 
 	<h2>3c. User Names with same city :</h2>
 
+	<p id="userWithSameCity"></p>
+	<h1>Free Fake APIs</h1>
+	<h2>1 All users with userId = 1 :</h2>
+	<p id="userWithUSerId1"></p>
+
+	<h2>2.1 All Products with Price Greater than 100 :</h2>
+	<p id="productsWithPriceGreaterThan100"></p>
+
+	<h2>2.2 Products Sorted By Name in Ascending Order :</h2>
+	<p id="productsAfterSortingByNameAsc"></p>
+	
+
     
 </body>
-
-</script>
 <script>
     /* $.getJSON('https://jsonplaceholder.typicode.com/posts', function(data) {
         // JSON result in `data` variable
@@ -92,6 +102,90 @@
         }
         count = 0;
     }
+    
+    
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(result => result.json())
+    .then((output) => {
+        console.log('Output: ', output.length);
+       // const obj = JSON.parse(output);
+       var count = 0;
+        for (let i = 0; i < output.length; i++) {
+            if(output[i].userId == 1){
+                count = count + 1;
+            document.getElementById("userWithUSerId1").innerHTML +=count + ". UserId : " + output[i].userId + " || UserName : " + output[i].title + "<br>";
+            }
+        }
+        
+    }).catch(err => console.error(err));
+    
+    var products;
+    fetch('https://fakestoreapi.com/products')
+    .then(result => result.json())
+    .then((output) => {
+        console.log('Output: ', output.length);
+        products = output;
+        console.log('products while setting it : ' + products);
+       // const obj = JSON.parse(output);
+       var html='';
+       var count = 0;
+        for (let i = 0; i < output.length; i++) {
+            if(output[i].price > 100){
+                count++;
+            html += count + ". Product-Name : " + output[i].title + " || Price : " + output[i].price
+             + "<br>";
+            }
+        }
+        
+        if(html.length > 0){
+            document.getElementById("productsWithPriceGreaterThan100").innerHTML += html;
+        }
+        
+    }).catch(err => console.error(err));
+    
+    
+    function compare(a, b) {
+        if (a.title < b.title) {
+            return -1;
+        }
+        if (a.title > b.title) {
+            return 1;
+        }
+        return 0;
+    }
+    
+    
+    
+    fetch('https://fakestoreapi.com/products')
+    .then(result => result.json())
+    .then((output) => {
+        console.log('Output: ', output.length);
+       // const obj = JSON.parse(output);
+       var html='';
+       var count = 0;
+       output.sort(compare);
+       console.log(output);
+        for (let i = 0; i < output.length; i++) {
+                count++;
+                //html += count + ". " + output[i]. + "<br>";
+            html += count + ". Product-Name : " + output[i].title + " || Price : " + output[i].price
+             + "<br>";
+            }
+        if(html.length > 0){
+            document.getElementById("productsAfterSortingByNameAsc").innerHTML += html;
+        }
+    }).catch(err => console.error(err));
+    
+    function compareDesc(a, b) {
+        if (a.name < b.name) {
+            return 1;
+        }
+        if (a.name > b.name) {
+            return -1;
+        }
+        return 0;
+    }
+    
     
 </script>   
 
