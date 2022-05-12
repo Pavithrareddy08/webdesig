@@ -29,6 +29,11 @@
 
 	<h2>2.2 Products Sorted By Name in Ascending Order :</h2>
 	<p id="productsAfterSortingByNameAsc"></p>
+    <h2>4.1 Cats Sorted By Name in Descending Order :</h2>
+	<p id="catsAfterSortingByNameDesc"></p>
+
+	<h2>4.2 Cats With Country Codes US :</h2>
+	<p id="catsWithCountryCodeUs"></p>
 	
 
     
@@ -185,6 +190,45 @@
         }
         return 0;
     }
+
+    fetch('https://api.thecatapi.com/v1/breeds')
+.then(result => result.json())
+.then((output) => {
+    console.log('Output: ', output.length);
+   // const obj = JSON.parse(output);
+   var html='';
+   var count = 0;
+   output.sort(compareDesc);
+   console.log(output);
+    for (let i = 0; i < output.length; i++) {
+    		count++;
+    		//html += count + ". " + output[i]. + "<br>";
+		html += count + ". Cats-Name : " + output[i].name + "<br>";
+    	}
+    if(html.length > 0){
+    	document.getElementById("catsAfterSortingByNameDesc").innerHTML += html;
+    }
+}).catch(err => console.error(err));
+
+fetch('https://api.thecatapi.com/v1/breeds')
+.then(result => result.json())
+.then((output) => {
+    console.log('Output: ', output.length);
+   var html='';
+   var count = 0;
+   output.sort(compareDesc);
+   console.log(output);
+    for (let i = 0; i < output.length; i++) {
+    	if(output[i].country_codes == 'US'){
+    		count++;
+		html += count + ". Cats-Name : " + output[i].name + "<br>";
+    	}
+    }
+    if(html.length > 0){
+    	document.getElementById("catsWithCountryCodeUs").innerHTML += html;
+    }
+}).catch(err => console.error(err));
+
     
     
 </script>   
